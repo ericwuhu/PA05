@@ -15,7 +15,7 @@ import java.util.Random;
 
 */
 
-public class Person {
+public abstract class Person {
   // the persons fate depends on some random variables...
   private Random random = new Random();
 
@@ -91,19 +91,22 @@ public class Person {
 
 	}
 
-  void tryToMove(){
-		tryToMoveRandomly();
-	}
+  public abstract void tryToMove();
+  	// Turning tryToMove() into a abstract class{
+		// tryToMoveRandomly();
+	//}
   /**
 	   try to move one step in a random direction.
 		 if they way is blocked then don't move.
 	*/
+  
+  //Code moved to skeptic
   void tryToMoveRandomly(){
-    int dx = random.nextInt(3)-1; // -1,0,1
-    int dy = random.nextInt(3)-1; // -1,0,1
-    if (isOK(this.x+dx, this.y+dy,this.country)) {
-      this.moveTo(this.x+dx, this.y+dy);
-    }
+	  int dx = random.nextInt(3)-1; // -1,0,1
+	  int dy = random.nextInt(3)-1; // -1,0,1
+	  if (isOK(this.x+dx, this.y+dy,this.country)) {
+		  this.moveTo(this.x+dx, this.y+dy);
+		  }
   }
 
 	/**

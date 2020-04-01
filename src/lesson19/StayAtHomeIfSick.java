@@ -8,10 +8,10 @@ public class StayAtHomeIfSick extends Person{
 	}
 
 	public void tryToMove() {
-
-    if (!this.infected){
-      super.tryToMove();
-    }
+		super.tryToMoveRandomly();
+    //if (!this.infected){
+      //super.tryToMove();
+    //}
 	}
 
 }

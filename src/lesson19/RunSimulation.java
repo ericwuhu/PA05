@@ -50,7 +50,7 @@ public class RunSimulation {
 		}
 		System.out.println("\nFinal State of the Country");
 		country.printCountry();
-
+		
 	}
 
 
